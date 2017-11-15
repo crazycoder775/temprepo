@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>React intro</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.min.js"></script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.0/babel.min.js"></script>
+
+
+
+</head>
+<body>
+
+<div id="example"></div>
+
+<script type="text/babel">
+
+	var Movie = React.createClass({
+		render : function() {
+		return (
+		<div>
+		<h1>{this.props.title}</h1>
+		<h2>{this.props.genre}</h2>
+		</div>
+		);
+		}
+
+	});
+
+
+	ReactDOM.render(
+	<div> 
+	<Movie title="Avatar" genre="action"/>
+<Movie title="Jack Reacher" genre="action"/>
+	<Movie title="Note book" genre="romance"/>
+	</div>, document.getElementById('example'));
+
+</script>
+
+
+</body>
+</html>
